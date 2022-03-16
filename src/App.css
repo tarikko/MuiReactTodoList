@@ -1,0 +1,112 @@
+:root {
+  --background: #370617;
+  --display: #FAFAFA;
+  --numKeys: #d00000;
+  --operationKeys: #e85d04;
+}
+
+html, body, #root {
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #000;
+}
+
+#root {
+  display: flex;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.App {
+  text-align: center;
+}
+
+.background {
+  width: 420px;
+  height: 600px;
+  margin: auto;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--background);
+}
+
+button:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+}
+
+.Display {
+  width: 100%;
+  height: 80px;
+  margin: auto auto 10px auto;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--display);
+}
+
+/* Using flex to align all the divs in the display which are used to display text */
+
+.Display > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 50%;
+} 
+
+/* Using css grid to align all the buttons*/
+
+.NumKeys {
+  background: var(--numKeys);
+  grid-area: a;
+}
+
+.OpsKeys {
+  background: var(--operationKeys);
+}
+
+.OpsKeys1 {
+  grid-area: b;
+}
+
+.OpsKeys2 {
+  grid-area: c;
+}
+.container {
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+}
+
+.container > div > button {
+  width: 90px;
+  height: 90px;
+  border: none;
+  border-radius: 50%;
+  font-size: 35px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.e > button:first-of-type{
+  width: 290px !important;
+  border-radius: 50px !important;
+}
+
+.a { grid-area: 2 / 1 / 5 / 4; }
+
+.b { grid-area: 4 / 2 / 5 / 4; }
+
+.c { grid-area: 2 / 4 / 5 / 5; }
+
+.e { grid-area: 1 / 1 / 1 / 5; }
