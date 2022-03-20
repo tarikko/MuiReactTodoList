@@ -3,4 +3,11 @@
 
 This is my first ever react project.
 
-![](https://github.com/tarikko/ReactSimpleCalculator/blob/master/Overview.gif)
+<p align="center">
+  <img src="https://github.com/tarikko/ReactSimpleCalculator/blob/master/gifs/Overview.gif" alt="animated" />
+</p>
+
+```
+yarn
+yarn start
+```
